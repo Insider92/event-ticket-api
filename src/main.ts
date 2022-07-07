@@ -22,13 +22,13 @@ async function bootstrap() {
   // used for database clean up
   app.enableShutdownHooks();
 
-    const options = new DocumentBuilder()
+  const options = new DocumentBuilder()
     .setTitle('Ticket I/O Event API')
     .setDescription('Event API')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup(configService.get('prefix')+'/api', app, document);
+  SwaggerModule.setup(configService.get('prefix') + '/api', app, document);
 
   await app.listen(configService.get('port'));
   logger.log(`Application listening on port ${configService.get('port')}`);

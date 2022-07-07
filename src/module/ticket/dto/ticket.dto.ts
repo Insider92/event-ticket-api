@@ -10,7 +10,7 @@ import { EventEntity } from 'src/module/event/database/event.entity';
 export class TicketDto {
   @ApiProperty({
     description: 'Has to be an alphanumeric code with maximum eight letters',
-    example: 'abc12345'
+    example: 'abc12345',
   })
   @IsString()
   @IsNotEmpty()
