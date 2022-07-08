@@ -19,8 +19,6 @@ async function bootstrap() {
   app.setGlobalPrefix(configService.get('prefix'));
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
-  // used for database clean up
-  app.enableShutdownHooks();
 
   const options = new DocumentBuilder()
     .setTitle('Ticket I/O Event API')
