@@ -1,4 +1,3 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { AbstractOrmEntity } from 'src/model/abstract.entity';
 import { TicketEntity } from 'src/module/ticket/database/ticket.entity';
 import { Entity, Column, OneToMany } from 'typeorm';
